@@ -47,5 +47,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             docker stop cicd-demo || true
             docker rm cicd-demo || true
-            docker run -d --name cicd-demo --restart unless-stopped -p 8080-8081 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            docker run -d --name cicd-demo --restart unless-stopped -p 8080:8081 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             docker image prune -f

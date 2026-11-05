@@ -15,7 +15,7 @@ public class WelcomeController {
     @GetMapping
     public ResponseEntity<String> welcome(){
         return ResponseEntity.status(HttpStatus.OK)
-                .body("<h1>FUCK YOU SHIV</h1>");
+                .body("<h1>Wish You a Very Happy Diwali</h1>");
     }
 
 }
